@@ -1,0 +1,22 @@
+declare
+   n int :
+   rev int:=0;
+   m int;
+   k int;
+begin
+   n:=&n;
+   m:=&m;
+   while(n>0)
+   loop
+	k:=mod(n,10);
+      rev:=rev*10+k;
+	n=trunc(n/10);
+   end loop;
+   if rev==m then
+       dbms_output.put_line(m||' is a palindrome');
+    else
+       dbms_output.put_line(m||' is not a palindrome');
+   end if;
+   end loop;
+end;
+/
